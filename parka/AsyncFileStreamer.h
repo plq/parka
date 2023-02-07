@@ -42,7 +42,19 @@ struct AsyncFileStreamer {
 
         res->writeStatus(uWS::HTTP_200_OK);
 
-        if (has_extension(url, ".svg")) {
+        if (url == "/" || has_extension(url, ".html")) {
+            res->writeHeader("Content-Type", "text/html");
+        }
+        else if (url == "/" || has_extension(url, ".css")) {
+            res->writeHeader("Content-Type", "text/css");
+        }
+        else if (has_extension(url, ".js")) {
+            res->writeHeader("Content-Type", "application/javascript");
+        }
+        else if (has_extension(url, ".ts")) {
+            res->writeHeader("Content-Type", "application/x-typescript");
+        }
+        else if (has_extension(url, ".svg")) {
             res->writeHeader("Content-Type", "image/svg+xml");
         }
 

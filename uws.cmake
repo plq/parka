@@ -6,7 +6,6 @@ set(BORINGSSL_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/boringssl.build)
 set(BORINGSSL_STATIC_LIBRARIES
     ${BORINGSSL_BINARY_DIR}/ssl/libssl.a
     ${BORINGSSL_BINARY_DIR}/crypto/libcrypto.a
-    #${BORINGSSL_BINARY_DIR}/decrepit/libdecrepit.a
 )
 
 ExternalProject_Add(boringssl
@@ -28,7 +27,7 @@ ExternalProject_Add(boringssl
         --build ${BORINGSSL_BINARY_DIR}
         --target libcrypto.a --target libssl.a
 
-    BUILD_ALWAYS TRUE
+    # BUILD_ALWAYS TRUE
     BUILD_BYPRODUCTS
         ${BORINGSSL_STATIC_LIBRARIES}
 
