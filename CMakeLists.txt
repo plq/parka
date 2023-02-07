@@ -18,10 +18,15 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(ZLIB REQUIRED zlib)
 
 include(uws.cmake)
+include(loguru.cmake)
 
-add_executable(parka main.cpp)
+add_executable(parka main.cpp
+    parka/optparse.h
+    parka/AsyncFileReader.h
+    parka/AsyncFileStreamer.h
+)
 
 target_include_directories(parka PUBLIC ${CMAKE_CURRENT_LIST_DIR})
-target_include_directories(parka PUBLIC uws ${ZLIB_INCLUDE_DIRS})
-target_link_libraries(parka PUBLIC uws ${ZLIB_LDFLAGS})
+target_include_directories(parka PUBLIC ${ZLIB_INCLUDE_DIRS})
+target_link_libraries(parka PUBLIC uws fmt loguru ${ZLIB_LDFLAGS})
 target_compile_definitions(parka PUBLIC LIBUS_USE_OPENSSL)
