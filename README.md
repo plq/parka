@@ -1,0 +1,3 @@
+# parka
+
+binalar hakkindaki bilgiler
