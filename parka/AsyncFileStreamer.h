@@ -1,6 +1,15 @@
 ﻿#ifndef PARKA_ASYNC_FILE_STREAMER_H
 #define PARKA_ASYNC_FILE_STREAMER_H
 
+/*
+ * Part of the Parka project (c) Parka contributors. All rights reserved.
+ * This file is being distributed under BSD license. See LICENSE file
+ * at the project root for the full text. See git log for the list of
+ * contributors.
+ */
+
+/* based on uws example */
+
 #include <filesystem>
 #include <map>
 #include <string>

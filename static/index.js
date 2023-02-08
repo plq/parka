@@ -1,9 +1,11 @@
-﻿// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+﻿
+/*
+ * Part of the Parka project (c) Parka contributors. All rights reserved.
+ * This file is being distributed under BSD license. See LICENSE file
+ * at the project root for the full text. See git log for the list of
+ * contributors.
+ */
+
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: {
@@ -55,6 +57,7 @@ function initMap() {
 
                 req.open("PUT", url);
                 req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
                 try {
                     req.send(JSON.stringify({
                         response: retdata,

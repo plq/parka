@@ -1,3 +1,13 @@
+﻿
+/*
+ * Part of the Parka project (c) Parka contributors. All rights reserved.
+ * This file is being distributed under BSD license. See LICENSE file
+ * at the project root for the full text. See git log for the list of
+ * contributors.
+ */
+
+/* Nicked from uws repo */
+
 /* Nicked from third-party https://github.com/skeeto/optparse 2018-09-24 */
 /* µWebSockets is not the origin of this software file */
 /* ------------------------------------------------------ */
